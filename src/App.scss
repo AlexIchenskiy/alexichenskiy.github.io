@@ -781,6 +781,12 @@ footer {
     }
 }
 
+@media only screen and (max-width: 420px) {
+    header {
+        height: 100%;
+    }
+}
+
 @media only screen and (max-width: 370px) {
     section.works {
         div.working, div.learning {
