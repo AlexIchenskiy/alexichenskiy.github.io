@@ -1,6 +1,5 @@
 function Mobilenavigation(props) {
     let offset = props.offset;
-    let colors = props.colors;
 
     let themestyle = "light";
     let style1     = {};

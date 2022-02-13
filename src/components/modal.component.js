@@ -1,9 +1,10 @@
 import { Link } from 'react-scroll';
+import disableScroll from 'disable-scroll';
 
 function Modal(props) {
     let offset = props.offset;
 
-    const posstyle = props.modalOpened ? "" : " closed";
+    let posstyle = "closed";
     let themestyle = "dark";
     let textstyle  = "light";
 
@@ -15,8 +16,16 @@ function Modal(props) {
         textstyle  = "dark";
     }
 
+    if (props.modalOpened) {
+        posstyle = "opened";
+        disableScroll.on();
+    } else {
+        posstyle = "closed";
+        disableScroll.off();
+    }
+
     return (
-        <div className = {"modal" + posstyle + " " + themestyle}>
+        <div className = {"modal" + " " + posstyle + " " + themestyle}>
             <ul>
                 <Link to="home" onClick = {props.handleOpen}>
                     <li className = {textstyle}>{props.text.HOME_TEXT.toUpperCase()}</li>

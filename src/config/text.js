@@ -6,7 +6,6 @@ const text = {
     SOCIAL_TEXT:          "Social",
     NAME_TEXT:            "Alex Ichenskiy",
     NAME_SUB_TEXT:        "Web/software development engineer located in Zagreb.",
-    WORKS_TEXT:           "Works",
     GITHUB_TEXT:          "GitHub",
     ABOUT_ME_TEXT:        "About Me",
     ABOUT_ME_SUB_TEXT:    "Hey! I`m Alex, web developer based in Zagreb. Creating code, web and \
