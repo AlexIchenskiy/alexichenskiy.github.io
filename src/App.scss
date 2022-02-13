@@ -227,9 +227,12 @@ section.about {
 
     div.left {
         div {
-            width: 150px;
-            height: 150px;
-            border-radius: 75px;
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             background-color: $bg-secondary-color;
         }
     }
@@ -291,6 +294,10 @@ section.about {
             span {
                 color: $base-color;
             }
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 }

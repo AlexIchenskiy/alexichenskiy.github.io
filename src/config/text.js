@@ -8,7 +8,7 @@ const text = {
     NAME_SUB_TEXT:        "Web/software development engineer located in Zagreb.",
     GITHUB_TEXT:          "GitHub",
     ABOUT_ME_TEXT:        "About Me",
-    ABOUT_ME_SUB_TEXT:    "Hey! I`m Alex, web developer based in Zagreb. Creating code, web and \
+    ABOUT_ME_SUB_TEXT:    "Hey! I`m Alex, web developer based in Zagreb creating code, web and \
                            content that builds an exceptional digital experience. Currently, I`m \
                            studying at FER and focused on creating human-centered and incredible \
                            products.",
@@ -28,6 +28,7 @@ const text = {
     JS_TEXT:              "JavaScript",
     REACT_TEXT:           "React",
     GIT_TEXT:             "GIT",
+    REST_TEXT:            "REST API",
     DESIGN_BY_TEXT:       "Design by ",
     STYLESHOUT_TEXT:      "styleshout",
     WORKING_ON_TEXT:      "I`m currently working on...",

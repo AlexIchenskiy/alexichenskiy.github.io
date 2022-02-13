@@ -25,23 +25,27 @@ function Resume(props) {
                 <div>
                     <div>
                         <span>{props.text.HTML_TEXT}</span>
-                        <Progressbar progress = {95} color = {'#7DDF64'} />
+                        <Progressbar progress = {95} color = {'#E6C229'} />
                     </div>
                     <div>
                         <span>{props.text.CSS_TEXT}</span>
-                        <Progressbar progress = {90} color = {'#C0DF85'} />
+                        <Progressbar progress = {90} color = {'#F17105'} />
                     </div>
                     <div>
                         <span>{props.text.JS_TEXT}</span>
-                        <Progressbar progress = {88} color = {'#DEB986'} />
+                        <Progressbar progress = {88} color = {'#D11149'} />
                     </div>
                     <div>
                         <span>{props.text.REACT_TEXT}</span>
-                        <Progressbar progress = {85} color = {'#DB6C79'} />
+                        <Progressbar progress = {85} color = {'#6610F2'} />
                     </div>
                     <div>
                         <span>{props.text.GIT_TEXT}</span>
-                        <Progressbar progress = {80} color = {'#ED4D6E'} />
+                        <Progressbar progress = {80} color = {'#1A8FE3'} />
+                    </div>
+                    <div>
+                        <span>{props.text.REST_TEXT}</span>
+                        <Progressbar progress = {88} color = {'#6DD3CE'} />
                     </div>
                 </div>
                 
