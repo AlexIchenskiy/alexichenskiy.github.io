@@ -17,8 +17,8 @@ $complementary-color: #1abc9c;
 html, body, #root, .App {
     overflow-x: hidden;
     overflow-y: auto;
-    width: 100%;
-    min-width: 360px;
+    width: 100vw;
+    min-width: 320px;
     min-height: 667px;
     max-height: 100%;
     margin: 0;
@@ -625,8 +625,8 @@ footer {
         align-items: center;
         top: 5px;
         right: 5px;
-        background-color: $bg-base-color;
         z-index: 2;
+        background-color: $bg-base-color;
     }
 
     div.light {
@@ -683,6 +683,7 @@ footer {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 0;
         }
 
         li.light {
@@ -726,6 +727,10 @@ footer {
 
             h3 {
                 font-size: 24px;
+            }
+
+            hr {
+                width: 60%;
             }
 
             div {
