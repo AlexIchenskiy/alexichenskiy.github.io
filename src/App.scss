@@ -48,7 +48,8 @@ nav.bg-hidden {
 }
 
 nav.shown {
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
 }
 
 .modal {
@@ -627,6 +628,7 @@ footer {
     div.modal {
         width: calc(100% - 10px);
         height: calc(100vh - 10px);
+        border-radius: 15px;
         position: fixed;
         display: flex;
         justify-content: center;
@@ -638,11 +640,13 @@ footer {
     }
 
     div.light {
-        background-color: $base-color;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(4px);
     }
 
     div.dark {
-        background-color: $bg-base-color;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(4px);
     }
 
     div.closed {
