@@ -1,27 +1,41 @@
+import { useEffect, useState } from 'react';
+
+import { Fade } from 'react-reveal';
+
 import { Link } from 'react-scroll';
 
 function Navigation(props) {
-    let offset = props.offset;
-    let style = {};
+  const [width, setWidth] = useState(0);
 
-    if (offset > 96 && offset < 522) {
-        style = "hidden";
-    } else if (offset > 522) {
-        style = "shown";
-    } else {
-        style = "bg-hidden";
+  let offset    = props.offset;
+  let style     = {};
+
+  if (offset > 44 && offset < 308) {
+      style = "hidden";
+  } else if (offset > 308) {
+      style = "shown";
+  } else {
+      style = "bg-hidden";
+  }
+
+  useEffect(() => {
+    if (width !== 100 * props.height) {
+      setWidth(100 * props.height);
     }
-    return (
+  }, [offset, props.height, width]);
+
+  return (
       <nav className = {style}>
+        <Fade delay={2000} duration={1000} when={props.loaded}>
         <ul>
             <Link to="home"><li>{props.text.HOME_TEXT.toUpperCase()}</li></Link>
-            <Link to="about"><li>{props.text.ABOUT_TEXT.toUpperCase()}</li></Link>
-            <Link to="resume"><li>{props.text.RESUME_TEXT.toUpperCase()}</li></Link>
             <Link to="works"><li>{props.text.WORKS_TEXT.toUpperCase()}</li></Link>
-            <Link to="social"><li>{props.text.SOCIAL_TEXT.toUpperCase()}</li></Link>
+            <Link to="social"><li>{props.text.CONTACT_TEXT.toUpperCase()}</li></Link>
+            <div className = 'dynamicBorder' style = {{width: width + "%"}} />
         </ul>
+        </Fade>
       </nav>
-    );
-  }
+  );
+}
   
-  export default Navigation;
+export default Navigation;

@@ -1,24 +1,27 @@
 import DownloadIcon from "../icons/downloadicon.icon";
 import resume from "../assets/AlexIchenskiyResume.pdf";
-import me from "../assets/me.jpg";
+
+import Fade from "react-reveal/Fade";
 
 function About(props) {
     return (
         <section className = "about" id = "about">
-            <div className = "left">
-                <div style = {{backgroundImage: `url(${me})`}}>
-                </div>
-            </div>
-            <div className = "right fill-button-outer">
-                <h1>{props.text.ABOUT_ME_TEXT}</h1>
-                <h3>{props.text.ABOUT_ME_SUB_TEXT}</h3>
-                <a href = {resume} download>
-                    <div>
-                        <DownloadIcon />
-                        <span>{props.text.DOWNLOAD_RESUME_TEXT}</span>
+            <Fade duration={1000} when={props.loaded} bottom>
+                <div className = "left">
+                    <div style={{transform: `rotate(${props.offset/5 - 40}deg)`}}>
                     </div>
-                </a>
-            </div>
+                </div>
+                <div className = "right fill-button-outer">
+                    <h1>{props.text.ABOUT_ME_TEXT}</h1>
+                    <h3>{props.text.ABOUT_ME_SUB_TEXT}</h3>
+                    <a href = {resume} download>
+                        <div>
+                            <DownloadIcon />
+                            <span>{props.text.DOWNLOAD_RESUME_TEXT}</span>
+                        </div>
+                    </a>
+                </div>
+            </Fade>
         </section>
     );
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;900&family=Rubik+Mono+One&display=swap');
 
 $base-color: #FFFFFF;
 $secondary-color: #FE6928;
@@ -26,6 +26,22 @@ html, body, #root, .App {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: $bg-darker-color;
+}
+
+.dynamicBg {
+    width: 100vw;
+    height: 150vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, transparent, $bg-darker-color), url(./assets/background.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -48,7 +64,7 @@ nav.bg-hidden {
 }
 
 nav.shown {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0);
     backdrop-filter: blur(4px);
 }
 
@@ -58,22 +74,39 @@ nav.shown {
 
 nav {
     ul {
+        position: relative;
         width: 480px;
+        padding: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+
+        div.dynamicBorder {
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 1px;
+            background-color: $base-color;
+        }
     }
 
-    li {
-        display: inline-block;
-        margin-top: 24px;
-        margin-bottom: 24px;
-        font-size: small;
-        font-weight: 700;
-        letter-spacing: 2.5px;
-        color: $base-color;
+    ul {
+        a {
+            list-style: none;
+            display: inline-block;
+            width: 20%;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            font-size: small;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-align: center;
+            color: $base-color;
+        }
     }
+    
 
     li:hover {
         color: $secondary-color;
@@ -98,17 +131,10 @@ header {
 }
 
 header {
-    canvas {
-        height: 100vh;
-        min-width: 360px;
-        min-height: 667px;
-        background: $bg-base-color;
-    }
-
     svg.svg-btn-down {
         width: 48px;
         fill: $base-color;
-        margin: 45px;
+        margin: 40px;
     }
 
     svg.svg-btn-down:hover {
@@ -129,7 +155,7 @@ header {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 125px;
+        margin-bottom: 75px;
         text-align: center;
     }
 
@@ -141,14 +167,24 @@ header {
         h1 {
             color: $base-color;
             font-size: 64px;
-            font-weight: 700;
+            font-weight: 400;
+            font-family: 'Rubik Mono One', sans-serif;
         }
 
         h3 {
-            color: $base-color;
-            font-family: "Montserrat", sans-serif;
-            font-size: 24px;
-            font-weight: 400;
+            div {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            div {
+                span {
+                    display: inline-block;
+                    color: $base-color;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+            }
         }
 
         hr {
@@ -205,14 +241,18 @@ header {
     }
 }
 
+.collapsedBg {
+    animation: 1.5s collapseBgBig;
+}
+
 section.about {
     width: 100%;
     height: auto;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: $bg-base-color;
 }
 
 section.about {
@@ -223,7 +263,7 @@ section.about {
         margin-top: 75px;
         display: flex;
         justify-content: flex-end;
-        align-items: flex-start;
+        align-items: center;
     }
 
     div.left {
@@ -231,10 +271,19 @@ section.about {
             width: 120px;
             height: 120px;
             border-radius: 60px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: $bg-secondary-color;
+            border: 1px solid $base-color;
+        }
+
+        div:after {
+            position: relative;
+            display: block;
+            content: "";
+            width: 10px;
+            height: 10px;
+            left: 60px;
+            top: -5px;
+            border-radius: 5px;
+            background-color: $base-color;
         }
     }
 
@@ -305,7 +354,7 @@ section.about {
 
 section.resume {
     width: 100%;
-    background-color: $base-color;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -316,7 +365,6 @@ section.resume {
     div.education, div.skills {
         width: 80%;
         margin: 75px;
-        margin-bottom: 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -325,9 +373,10 @@ section.resume {
 
     div.education, div.skills {
         div.title {
-            width: 120px;
+            margin: 20px;
+            padding-bottom: 10px;
             text-align: center;
-            border-bottom: 3px solid $complementary-color;
+            color: $base-color;
         }
 
         div.title {
@@ -354,10 +403,44 @@ section.resume {
     }
 
     div.education {
+        div.title {
+            width: 300px;
+        }
+
+        div.educationList {
+            position: relative;
+            border-left: 1px solid $base-color;
+        }
+
+        div.educationList::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -6px;
+            top: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+  
+            border-bottom: 10px solid $base-color;
+        }
+
+        div.educationList::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 9px;
+            height: 3px;
+            left: -5px;
+            top: 95%;
+            background-color: $base-color;
+        }
+
         div {
             div {
                 h1 {
-                    color: $bg-base-color;
+                    color: $base-color;
                     margin-bottom: 15px;
                 }
 
@@ -370,25 +453,59 @@ section.resume {
     }
 
     div.skills {
+        width: 60%;
+    }
+
+    div.skills {
         div {
-            div {
-                margin: 0px;
-                margin-top: 50px;
-                margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        div.title {
+            width: 250px;
+            margin-bottom: 0;
+        }
+        
+        div {
+            a {
+                margin: 10px 8px;
             }
 
-            div {
+            a {
                 span {
-                    font-size: 24px;
-                    font-weight: 700;
+                    font-size: 20px;
                 }
             }
         }
     }
+}
 
-    div.progressbar {
-        width: 60%;
-        height: 45px;
+.roundButton {
+    display: inline-block;
+    height: auto;
+    padding: 10px;
+    border-radius: 24px;
+    border: 1px solid $base-color;
+    text-decoration: none;
+    background-size: 210% 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, $base-color 50%);
+
+    span {
+        color: $base-color;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.roundButton:hover {
+    background-position: -94%;
+    transform: scale(1.05);
+    
+    span {
+        color: $bg-darker-color;
     }
 }
 
@@ -397,19 +514,12 @@ section.works {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $bg-darker-color;
     color: $base-color;
 }
 
 section.works {
-    div {
-        margin: 50px;
-        margin-top: 75px;
-    }
-
     div.title {
-        width: 360px;
-        border-bottom: 3px solid $complementary-color;
+        width: 380px;
         margin-bottom: 0;
     }
 
@@ -424,7 +534,7 @@ section.works {
         div.title {
             text-align: center;
             font-size: 24px;
-            font-weight: 400;
+            font-weight: 700;
             padding: 10px;
         }
 
@@ -438,35 +548,59 @@ section.works {
 
         div.projects {
             div.project {
-                width: 350px;
-                height: 200px;
+                width: 450px;
+                height: 300px;
                 position: relative;
-                background-color: black;
+                overflow: hidden;
                 color: $base-color;
-                background-size: cover;
-                background-position: center;
+                transition: 0.8s all ease-in-out;
             }
 
             a {
+                width: 450px;
+                height: 300px;
+                margin: 15px 50px 75px 50px;
                 text-decoration: none;
             }
 
+            div.project {
+                div.projectBg {
+                    background-size: cover;
+                    background-position: center;
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    right: 0;
+                    bottom: 0;
+                    filter: sepia(60%);
+                    transition: 0.8s ease-out all;
+                }
+            }
+
             div.project:hover {
-                transform: scale(1.05);
+                transform: scale(0.95);
+            }
+
+            div.project:hover {
+                div.projectBg {
+                    filter: none;
+                    transform: scale(1.2);
+                }
             }
 
             div.project:active {
-                transform: scale(0.98);
+                transform: scale(1.05);
             }
 
             div.project {
-                div {
+                div.projectDescription {
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     margin: 0;
                     width: 100%;
-                    height: 50px;
+                    height: 60px;
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-start;
@@ -475,7 +609,7 @@ section.works {
                     opacity: 0.5;
                 }
 
-                div {
+                div.projectDescription {
                     span {
                         margin-left: 15px;
                     }
@@ -492,7 +626,6 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: $bg-darkest-color;
 }
 
 footer {
@@ -538,6 +671,8 @@ footer {
         }
     
         li {
+            width: 20%;
+            text-align: center;
             display: inline-block;
         }
 
@@ -594,121 +729,20 @@ footer {
 
 @media only screen and (max-width: 768px) {
     nav {
-        display: none;
-    }
-
-    div.modal-btn {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        width: 36px;
-        height: 24px;
-    }
-
-    div.modal-btn {
-        span {
-            width: 100%;
-            height: 3px;
-            background-color: $base-color;
-        }
-
-        span.light {
-            background-color: $base-color;
-        }
-
-        span.dark {
-            background-color: $bg-base-color;
-        }
-    }
-
-    div.modal {
-        width: calc(100% - 10px);
-        height: calc(100vh - 10px);
-        border-radius: 15px;
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 5px;
-        right: 5px;
-        z-index: 2;
-        background-color: $bg-base-color;
-    }
-
-    div.light {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(4px);
-    }
-
-    div.dark {
-        background: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(4px);
-    }
-
-    div.closed {
-        right: -100%;
-    }
-
-    div.modal {
         ul {
-            li {
-                display: block;
-                margin: 25px;
-                margin-bottom: 50px;
-                color: $base-color;
-                font-size: 32px;
-                font-weight: 400;
-                text-align: center;
-            }
-
-            li:hover {
-                transform: scale(1.1);
-            }
-
-            li.light:hover {
-                color: $complementary-color;
-            }
-
-            li.dark:hover {
-                color: $secondary-color;
-            }
-
-            li:active {
-                transform: scale(0.95);
-            }
-
-            li.light:active {
-                color: $complementary-color;
-            }
-
-            li.dark:active {
-                color: $secondary-color;
-            }
+            width: 80%;
         }
 
         ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-        }
-
-        li.light {
-            color: $base-color;
-        }
-
-        li.dark {
-            color: $bg-base-color;
+            a {
+                width: auto;
+                font-size: 12px;
+            }
         }
     }
 
-    div.modal-btn {
-        z-index: 3;
+    .collapsedBg {
+        animation: 1.5s collapseBgSmall;
     }
 
     section.about {
@@ -723,22 +757,32 @@ footer {
                 width: 80%;
             }
         }
+
+        div.skills {
+            div {
+                a {
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 548px) {
-    nav {
-        display: none;
-    }
-
     header {
         section {
             h1 {
-                font-size: 48px;
+                font-size: 36px;
             }
 
             h3 {
-                font-size: 24px;
+                div {
+                    span {
+                        font-size: 24px;
+                    }
+                }
             }
 
             hr {
@@ -753,6 +797,15 @@ footer {
                 div {
                     width: 100px;
                 }
+            }
+        }
+    }
+
+    section.about {
+        div.right {
+            h3 {
+                font-size: 16px;
+                letter-spacing: 0.1vw;
             }
         }
     }
@@ -780,6 +833,16 @@ footer {
                 }
             }
         }
+
+        div.skills {
+            div {
+                a {
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
     }
 
     section.works {
@@ -788,6 +851,13 @@ footer {
                 width: 275px;
                 padding: 10px 0;
             }
+
+            div.projects {
+                a, div.project {
+                    width: 400px;
+                    height: 250px;
+                }
+            }
         }
     }
 }
@@ -795,6 +865,36 @@ footer {
 @media only screen and (max-width: 420px) {
     header {
         height: 100%;
+    }
+
+    header {
+        section {
+            height: 350px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            div {
+                width: 234px;
+            }
+        }
+    }
+
+    section.works {
+        div.working, div.learning {
+            div.projects {
+                a, div.project {
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    section.resume {
+        div.skills {
+            width: 80%;
+        }
     }
 }
 
@@ -806,11 +906,51 @@ footer {
             }
 
             div.projects {
-                div.project {
+                a, div.project {
                     width: 250px;
                     height: 150px;
                 }
             }
         }
+    }
+
+    section.resume {
+        div.skills {
+            div {
+                a {
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes collapseBgSmall {
+    0% {
+        clip-path: polygon(50% 10%, 70% 35%, 50% 60%, 30% 35%);
+    }
+
+    50% {
+        clip-path: polygon(50% 10%, 70% 35%, 50% 60%, 30% 35%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes collapseBgBig {
+    0% {
+        clip-path: polygon(50% 10%, 60% 35%, 50% 60%, 40% 35%);
+    }
+
+    50% {
+        clip-path: polygon(50% 10%, 60% 35%, 50% 60%, 40% 35%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
