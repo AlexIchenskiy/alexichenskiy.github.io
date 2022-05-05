@@ -9,7 +9,7 @@ import GithubIcon from "../icons/githubicon.icon";
 function Footer(props) {
     return (
         <footer id = "social">
-            <Fade duration={1000} when={props.loaded}>
+            <Fade duration={1000} when={props.loaded} cascade >
                 <Link to = "home"><UpIcon /></Link>
                 <div>
                     <ul>
