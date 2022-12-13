@@ -171,18 +171,28 @@ header {
             font-family: 'Rubik Mono One', sans-serif;
         }
 
-        h3 {
-            div {
+        span {
+            h3 {
                 display: flex;
-                flex-wrap: wrap;
+                justify-content: center;
+                overflow: hidden;
             }
-            div {
-                span {
-                    display: inline-block;
-                    color: $base-color;
-                    font-family: "Montserrat", sans-serif;
-                    font-size: 24px;
-                    font-weight: 400;
+
+            h3 {
+                div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    white-space: nowrap;
+                    width: fit-content;
+                }
+                div {
+                    span {
+                        display: inline-block;
+                        color: $base-color;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
                 }
             }
         }
@@ -771,6 +781,12 @@ footer {
 }
 
 @media only screen and (max-width: 548px) {
+    div.dynamicBg {
+        background-position-x: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+
     header {
         section {
             h1 {
@@ -815,6 +831,11 @@ footer {
     }
 
     section.resume {
+        div.education {
+            div.educationList {
+                padding-left: 20px;
+            }
+        }
         div.education, div.skills {
             div {
                 width: 100%;

@@ -12,8 +12,11 @@ function Header(props) {
         <header id = "home">
             <section>
                 <h1 className = 'bgHoverShape'>{props.text.NAME_TEXT}</h1>
-                <Fade delay={2000} duration={1000} when={props.loaded} cascade>
-                    <h3><Fade delay={1500} bottom cascade>{props.text.NAME_SUB_TEXT}</Fade></h3>
+                <span>
+                    <h3><Fade delay={1500} duration={500} bottom cascade>{props.text.NAME_SUB_TEXT_FIRST}</Fade></h3>
+                    <h3><Fade delay={1500} duration={500} bottom cascade>{props.text.NAME_SUB_TEXT_SECOND}</Fade></h3>
+                </span>
+                <Fade delay={2500} duration={1000} when={props.loaded} cascade>
                     <hr />
                     <div>
                         <Link to = "works">
@@ -31,7 +34,7 @@ function Header(props) {
                     </div>
                 </Fade>
             </section>
-            <Fade delay={2000} duration={1000} when={props.loaded}>
+            <Fade delay={3000} duration={1000} when={props.loaded}>
                 <Link to = "about"><DownIcon /></Link>
             </Fade>
       </header>

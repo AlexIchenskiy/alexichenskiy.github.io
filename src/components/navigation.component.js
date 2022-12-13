@@ -26,7 +26,7 @@ function Navigation(props) {
 
   return (
       <nav className = {style}>
-        <Fade delay={2000} duration={1000} when={props.loaded}>
+        <Fade delay={2500} duration={1000} when={props.loaded}>
         <ul>
             <Link to="home"><li>{props.text.HOME_TEXT.toUpperCase()}</li></Link>
             <Link to="works"><li>{props.text.WORKS_TEXT.toUpperCase()}</li></Link>
