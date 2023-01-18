@@ -20,7 +20,7 @@ const text = {
     UNIVERSITY_DATE_TEXT: <span><i>Bachelor of Science in Computing</i> • 2021 - 2024</span>,
     SCHOOL_NAME_TEXT:     "V. Gymnasium",
     SCHOOL_DATE_TEXT:     <span><i>Secondary education</i> • 2017 - 2021</span>,
-    PASSION_TEXT:          "I'm always curious about",
+    PASSION_TEXT:         "I'm always curious about...",
     HTML_TEXT:            "HTML",
     CSS_TEXT:             "CSS",
     JS_TEXT:              "JAVASCRIPT",
@@ -40,7 +40,7 @@ const text = {
     WORKING_ON_TEXT:      "I`m currently working on...",
     ALLIEN_TEXT:          "Allien",
     POLICHROMA_TEXT:      "Polichroma",
-    LEARNING_TEXT:        "My small things",
+    WIDGETS_TEXT:         "...and some widgets...",
     WEATHER_WIDGET_TEXT:  "Weather Widget",
     CARD_WIDGET_TEXT:     "Credit Card Widget"
 }
