@@ -39,7 +39,7 @@ body {
     top: 0;
     right: 0;
     background: linear-gradient(to bottom, transparent, $bg-darker-color), url(./assets/background.jpg);
-    background-size: contain;
+    background-size: cover;
     overflow: hidden;
 }
 
