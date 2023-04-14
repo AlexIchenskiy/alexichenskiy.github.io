@@ -1,3 +1,5 @@
+// TODO: refactor
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;900&family=Rubik+Mono+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
 
@@ -15,7 +17,10 @@ $complementary-color: #1abc9c;
     transition: 0.2s all;
 }
 
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
     overflow-x: hidden;
     overflow-y: auto;
     width: 100vw;
@@ -33,7 +38,9 @@ body {
 
 .dynamicBg {
     width: 100vw;
+    min-width: 320px;
     height: 150vh;
+    min-height: 800px;
     position: fixed;
     z-index: -1;
     top: 0;
@@ -107,7 +114,7 @@ nav {
             color: $base-color;
         }
     }
-    
+
 
     li:hover {
         color: $secondary-color;
@@ -186,6 +193,7 @@ header {
                     white-space: nowrap;
                     width: fit-content;
                 }
+
                 div {
                     span {
                         display: inline-block;
@@ -374,7 +382,9 @@ section.resume {
 }
 
 section.resume {
-    div.education, div.skills {
+
+    div.education,
+    div.skills {
         width: 80%;
         margin: 75px;
         display: flex;
@@ -383,7 +393,8 @@ section.resume {
         align-items: center;
     }
 
-    div.education, div.skills {
+    div.education,
+    div.skills {
         div.title {
             margin: 20px;
             padding-bottom: 10px;
@@ -435,7 +446,7 @@ section.resume {
             top: 0;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
-  
+
             border-bottom: 10px solid $base-color;
         }
 
@@ -476,12 +487,12 @@ section.resume {
             flex-direction: row;
             flex-wrap: wrap;
         }
-        
+
         div.title {
             width: 250px;
             margin-bottom: 0;
         }
-        
+
         div {
             a {
                 margin: 10px 8px;
@@ -516,7 +527,7 @@ section.resume {
 .roundButton:hover {
     background-position: -94%;
     transform: scale(1.05);
-    
+
     span {
         color: $bg-darker-color;
     }
@@ -536,14 +547,16 @@ section.works {
         margin-bottom: 0;
     }
 
-    div.working, div.learning {
+    div.working,
+    div.learning {
         margin: 0px 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    div.working, div.learning {
+    div.working,
+    div.learning {
         div.title {
             text-align: center;
             font-size: 24px;
@@ -688,7 +701,7 @@ footer {
             margin-top: 50px;
             padding: 0;
         }
-    
+
         li {
             width: 20%;
             text-align: center;
@@ -705,7 +718,7 @@ footer {
             fill: $complementary-color;
             transform: scale(0.95);
         }
-    
+
         .svg-btn-git {
             transform: scale(1.7);
         }
@@ -723,13 +736,14 @@ footer {
         margin: 15px;
         margin-bottom: 35px;
     }
-    
+
     span {
         * {
             display: inline;
         }
 
-        a, h3 {
+        a,
+        h3 {
             color: $base-color;
             text-align: center;
             font-size: 16px;
@@ -771,7 +785,9 @@ footer {
     }
 
     section.resume {
-        div.education, div.skills {
+
+        div.education,
+        div.skills {
             div {
                 width: 80%;
             }
@@ -845,7 +861,9 @@ footer {
                 padding-left: 20px;
             }
         }
-        div.education, div.skills {
+
+        div.education,
+        div.skills {
             div {
                 width: 100%;
             }
@@ -876,14 +894,18 @@ footer {
     }
 
     section.works {
-        div.working, div.learning {
+
+        div.working,
+        div.learning {
             div.title {
                 width: 275px;
                 padding: 10px 0;
             }
 
             div.projects {
-                a, div.project {
+
+                a,
+                div.project {
                     width: 400px;
                     height: 250px;
                 }
@@ -911,9 +933,13 @@ footer {
     }
 
     section.works {
-        div.working, div.learning {
+
+        div.working,
+        div.learning {
             div.projects {
-                a, div.project {
+
+                a,
+                div.project {
                     width: 300px;
                     height: 200px;
                 }
@@ -930,13 +956,17 @@ footer {
 
 @media only screen and (max-width: 370px) {
     section.works {
-        div.working, div.learning {
+
+        div.working,
+        div.learning {
             div.title {
                 width: 250px;
             }
 
             div.projects {
-                a, div.project {
+
+                a,
+                div.project {
                     width: 250px;
                     height: 150px;
                 }
