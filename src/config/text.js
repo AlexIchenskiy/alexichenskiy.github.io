@@ -38,6 +38,8 @@ const text = {
     DESIGN_BY_TEXT:       "Design by ",
     ME_TEXT:              "me",
     WORKING_ON_TEXT:      "I`m currently working on...",
+    PEEPO_TEXT:           "Peepo Eats API",
+    GIT_CALENDAR_TEXT:    "Git Calendar",
     ALLIEN_TEXT:          "Allien",
     POLICHROMA_TEXT:      "Polichroma",
     WIDGETS_TEXT:         "...and some widgets...",

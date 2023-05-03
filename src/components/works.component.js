@@ -1,3 +1,5 @@
+import peepo from "../assets/peepo.jpg";
+import gitcalendar from "../assets/gitcalendar.jpg";
 import allien from "../assets/allien.jpg";
 import polichroma from "../assets/polichroma.jpg";
 import weather from "../assets/weather.jpg";
@@ -18,6 +20,32 @@ function Works(props) {
                         </div>
                     </Slide>
                     <div className="projects">
+                        <a href="https://github.com/AlexIchenskiy/peepo-eats-api">
+                            <div className="peepo project">
+                                <div
+                                    className="projectBg"
+                                    style={{
+                                        backgroundImage: `url(${peepo})`,
+                                    }}
+                                />
+                                <div className="projectDescription">
+                                    <span>{props.text.PEEPO_TEXT}</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://alexichenskiy.github.io/GitCalendar/#/2023-05">
+                            <div className="gitcalendar project">
+                                <div
+                                    className="projectBg"
+                                    style={{
+                                        backgroundImage: `url(${gitcalendar})`,
+                                    }}
+                                />
+                                <div className="projectDescription">
+                                    <span>{props.text.GIT_CALENDAR_TEXT}</span>
+                                </div>
+                            </div>
+                        </a>
                         <a href="https://alexichenskiy.github.io/allien/">
                             <div className="allien project">
                                 <div
