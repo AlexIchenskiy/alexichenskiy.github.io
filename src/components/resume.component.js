@@ -74,6 +74,14 @@ function Resume(props) {
                         </a>
                         <a
                             className="roundButton"
+                            href="https://www.postgresql.org/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <span>{props.text.SQL_TEXT}</span>
+                        </a>
+                        <a
+                            className="roundButton"
                             href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview"
                             target="_blank"
                             rel="noreferrer"
@@ -119,6 +127,30 @@ function Resume(props) {
                             rel="noreferrer"
                         >
                             <span>{props.text.FRONTEND_TEXT}</span>
+                        </a>
+                        <a
+                            className="roundButton"
+                            href="https://roadmap.sh/backend"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <span>{props.text.BACKEND_TEXT}</span>
+                        </a>
+                        <a
+                            className="roundButton"
+                            href="https://memgraph.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <span>{props.text.MEMGRAPH_TEXT}</span>
+                        </a>
+                        <a
+                            className="roundButton"
+                            href="https://memgraph.com/blog/what-is-a-graph-database"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <span>{props.text.GRAPH_DATABASE_TEXT}</span>
                         </a>
                         <a
                             className="roundButton"

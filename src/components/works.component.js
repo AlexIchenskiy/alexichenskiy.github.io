@@ -1,3 +1,5 @@
+import odin from "../assets/odin.jpg";
+import rune from "../assets/rune.jpg";
 import peepo from "../assets/peepo.jpg";
 import gitcalendar from "../assets/gitcalendar.jpg";
 import allien from "../assets/allien.jpg";
@@ -20,6 +22,32 @@ function Works(props) {
                         </div>
                     </Slide>
                     <div className="projects">
+                        <a href="https://github.com/memgraph/odin">
+                            <div className="odin project">
+                                <div
+                                    className="projectBg"
+                                    style={{
+                                        backgroundImage: `url(${odin})`,
+                                    }}
+                                />
+                                <div className="projectDescription">
+                                    <span>{props.text.ODIN_TEXT}</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/memgraph/rune">
+                            <div className="rune project">
+                                <div
+                                    className="projectBg"
+                                    style={{
+                                        backgroundImage: `url(${rune})`,
+                                    }}
+                                />
+                                <div className="projectDescription">
+                                    <span>{props.text.RUNE_TEXT}</span>
+                                </div>
+                            </div>
+                        </a>
                         <a href="https://github.com/AlexIchenskiy/peepo-eats-api">
                             <div className="peepo project">
                                 <div
