@@ -4,12 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
 
 $base-color: #FFFFFF;
-$secondary-color: #FE6928;
+$secondary-color: #FF79EE;
 $bg-base-color: #000524;
 $bg-secondary-color: #838C95;
 $bg-darker-color: #191919;
 $bg-darkest-color: #0D0D0D;
-$complementary-color: #1abc9c;
+$complementary-color: #D1195E;
 
 * {
     margin: 0;
@@ -242,19 +242,19 @@ header {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                background-size: 200% 100%;
+                background-size: 202% 100%;
                 background-image: linear-gradient(to right, $secondary-color 50%, $complementary-color 50%);
             }
 
             div:hover {
-                transform: scale(1.1);
-                background-position: -100% 0;
+                transform: scale(1.05);
+                background-position: -98% 0;
                 cursor: pointer;
             }
 
             div:active {
                 transform: scale(0.95);
-                background-position: -100% 0;
+                background-position: -98% 0;
             }
         }
     }
@@ -469,7 +469,7 @@ section.resume {
                 }
 
                 h2 {
-                    color: $bg-secondary-color;
+                    color: $bg-darkest-color;
                     font-weight: 400;
                 }
             }
@@ -733,8 +733,12 @@ footer {
     }
 
     span {
-        margin: 15px;
+        margin-top: 15px;
         margin-bottom: 35px;
+    }
+
+    span.heart {
+        color: $complementary-color;
     }
 
     span {
@@ -808,7 +812,7 @@ footer {
 @media only screen and (max-width: 548px) {
     div.dynamicBg {
         background-position-x: center;
-        background-size: auto;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 

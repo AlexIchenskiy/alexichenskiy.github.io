@@ -11,6 +11,10 @@ function Resume(props) {
                     <div className="educationList">
                         <div>
                             <h1>{props.text.UNIVERSITY_NAME_TEXT}</h1>
+                            <h2>{props.text.UNIVERSITY_DATE_MSC_TEXT}</h2>
+                        </div>
+                        <div>
+                            <h1>{props.text.UNIVERSITY_NAME_TEXT}</h1>
                             <h2>{props.text.UNIVERSITY_DATE_TEXT}</h2>
                         </div>
                         <div>
