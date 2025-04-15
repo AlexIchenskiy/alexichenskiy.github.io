@@ -131,7 +131,7 @@ function Works(props) {
                                 <div
                                     className="projectBg"
                                     style={{
-                                        backgroundImage: `url(require(${credit}))`,
+                                        backgroundImage: `url(${credit})`,
                                     }}
                                 />
                                 <div className="projectDescription">
