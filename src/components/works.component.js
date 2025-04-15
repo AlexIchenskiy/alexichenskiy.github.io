@@ -4,7 +4,7 @@ import peepo from "../assets/peepo.jpg";
 import gitcalendar from "../assets/gitcalendar.jpg";
 import allien from "../assets/allien.jpg";
 import polichroma from "../assets/polichroma.jpg";
-import weather from "../assets/weather.jpg";
+// import weather from "../assets/weather.jpg";
 import credit from "../assets/credit.jpg";
 
 import Slide from "react-reveal/Slide";
@@ -111,7 +111,7 @@ function Works(props) {
                         </div>
                     </Slide>
                     <div className="projects">
-                        <a href="https://alexichenskiy.github.io/weather-widget-react/">
+                        {/* <a href="https://alexichenskiy.github.io/weather-widget-react/">
                             <div className="weather project">
                                 <div
                                     className="projectBg"
@@ -125,13 +125,13 @@ function Works(props) {
                                     </span>
                                 </div>
                             </div>
-                        </a>
+                        </a> */}
                         <a href="https://alexichenskiy.github.io/credit-card-react/">
                             <div className="credit project">
                                 <div
                                     className="projectBg"
                                     style={{
-                                        backgroundImage: `url(${credit})`,
+                                        backgroundImage: `url(require(${credit}))`,
                                     }}
                                 />
                                 <div className="projectDescription">
