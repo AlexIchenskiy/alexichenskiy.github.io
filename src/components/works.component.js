@@ -8,6 +8,7 @@ import polichroma from "../assets/polichroma.jpg";
 import credit from "../assets/credit.jpg";
 
 import Slide from "react-reveal/Slide";
+import Image from "./image.component";
 
 function Works(props) {
     return (
@@ -24,12 +25,7 @@ function Works(props) {
                     <div className="projects">
                         <a href="https://github.com/memgraph/odin">
                             <div className="odin project">
-                                <div
-                                    className="projectBg"
-                                    style={{
-                                        backgroundImage: `url(${odin})`,
-                                    }}
-                                />
+                                <Image src={odin} className='projectBg' placeholderColor="#FBE3B2" lazyLoad />
                                 <div className="projectDescription">
                                     <span>{props.text.ODIN_TEXT}</span>
                                 </div>
@@ -37,12 +33,7 @@ function Works(props) {
                         </a>
                         <a href="https://github.com/memgraph/rune">
                             <div className="rune project">
-                                <div
-                                    className="projectBg"
-                                    style={{
-                                        backgroundImage: `url(${rune})`,
-                                    }}
-                                />
+                                <Image src={rune} className='projectBg' placeholderColor="#CC9E66" lazyLoad />
                                 <div className="projectDescription">
                                     <span>{props.text.RUNE_TEXT}</span>
                                 </div>
@@ -50,12 +41,7 @@ function Works(props) {
                         </a>
                         <a href="https://github.com/AlexIchenskiy/peepo-eats-api">
                             <div className="peepo project">
-                                <div
-                                    className="projectBg"
-                                    style={{
-                                        backgroundImage: `url(${peepo})`,
-                                    }}
-                                />
+                                <Image src={peepo} className='projectBg' placeholderColor="#B05E33" lazyLoad />
                                 <div className="projectDescription">
                                     <span>{props.text.PEEPO_TEXT}</span>
                                 </div>
@@ -63,12 +49,7 @@ function Works(props) {
                         </a>
                         <a href="https://alexichenskiy.github.io/GitCalendar/#/2023-05">
                             <div className="gitcalendar project">
-                                <div
-                                    className="projectBg"
-                                    style={{
-                                        backgroundImage: `url(${gitcalendar})`,
-                                    }}
-                                />
+                                <Image src={gitcalendar} className='projectBg' placeholderColor="#BABCB9" lazyLoad />
                                 <div className="projectDescription">
                                     <span>{props.text.GIT_CALENDAR_TEXT}</span>
                                 </div>
@@ -76,12 +57,7 @@ function Works(props) {
                         </a>
                         <a href="https://alexichenskiy.github.io/allien/">
                             <div className="allien project">
-                                <div
-                                    className="projectBg"
-                                    style={{
-                                        backgroundImage: `url(${allien})`,
-                                    }}
-                                />
+                                <Image src={allien} className='projectBg' placeholderColor="#B2A799" lazyLoad />
                                 <div className="projectDescription">
                                     <span>{props.text.ALLIEN_TEXT}</span>
                                 </div>
@@ -89,12 +65,7 @@ function Works(props) {
                         </a>
                         <a href="https://alexichenskiy.github.io/polichroma/">
                             <div className="polichroma project">
-                                <div
-                                    className="projectBg"
-                                    style={{
-                                        backgroundImage: `url(${polichroma})`,
-                                    }}
-                                />
+                                <Image src={polichroma} className='projectBg' placeholderColor="#C36FD1" lazyLoad />
                                 <div className="projectDescription">
                                     <span>{props.text.POLICHROMA_TEXT}</span>
                                 </div>
@@ -128,12 +99,7 @@ function Works(props) {
                         </a> */}
                         <a href="https://alexichenskiy.github.io/credit-card-react/">
                             <div className="credit project">
-                                <div
-                                    className="projectBg"
-                                    style={{
-                                        backgroundImage: `url(${credit})`,
-                                    }}
-                                />
+                                <Image src={credit} className='projectBg' placeholderColor="#00783B" lazyLoad />
                                 <div className="projectDescription">
                                     <span>{props.text.CARD_WIDGET_TEXT}</span>
                                 </div>
