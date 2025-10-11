@@ -1,6 +1,7 @@
-import DownloadIcon from "../icons/downloadicon.icon";
-
 import Fade from "react-reveal/Fade";
+
+import DownloadIcon from "../icons/downloadicon.icon";
+import Resum from "../assets/AlexIchenskiyResume.pdf";
 
 function About(props) {
     return (
@@ -16,7 +17,7 @@ function About(props) {
                 <div className="right fill-button-outer">
                     <h1>{props.text.ABOUT_ME_TEXT}</h1>
                     <h3>{props.text.ABOUT_ME_SUB_TEXT}</h3>
-                    <a href="/assets/AlexIchenskiyResume.pdf" download>
+                    <a href={Resume} download="Oleksandr_Ichenskyi_resume.pdf">
                         <div>
                             <DownloadIcon />
                             <span>{props.text.DOWNLOAD_RESUME_TEXT}</span>
