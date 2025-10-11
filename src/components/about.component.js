@@ -1,7 +1,7 @@
 import Fade from "react-reveal/Fade";
 
 import DownloadIcon from "../icons/downloadicon.icon";
-import Resum from "../assets/AlexIchenskiyResume.pdf";
+import Resume from "../assets/AlexIchenskiyResume.pdf";
 
 function About(props) {
     return (
